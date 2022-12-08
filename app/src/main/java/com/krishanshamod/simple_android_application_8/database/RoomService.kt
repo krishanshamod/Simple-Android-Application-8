@@ -1,4 +1,4 @@
-package com.krishanshamod.simple_android_application_8.repository
+package com.krishanshamod.simple_android_application_8.database
 
 import android.content.Context
 import androidx.room.Room
