@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface DevbyteApiService {
 
     @GET("devbytes")
-    fun getPlaylist(): NetworkVideoContainer
+    suspend fun getPlaylist(): NetworkVideoContainer
 
 }
