@@ -2,6 +2,7 @@ package com.krishanshamod.simple_android_application_8.ui.main
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +31,13 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        // Observe the playlist LiveData
+        viewModel.playlist.observe(viewLifecycleOwner) {
+            Log.d("MainFragment", it[0].title)
+            binding.message.text = it[0].title
+        }
+
     }
 
 }
