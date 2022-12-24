@@ -10,7 +10,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.krishanshamod.simple_android_application_8.R
 import com.krishanshamod.simple_android_application_8.databinding.FragmentMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
     companion object {
