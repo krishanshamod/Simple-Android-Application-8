@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.krishanshamod.simple_android_application_8.api.DevbyteApiService
-import com.krishanshamod.simple_android_application_8.model.DevbyteVideo
+import com.krishanshamod.simple_android_application_8.data.api.DevbyteApiService
+import com.krishanshamod.simple_android_application_8.data.model.DevbyteVideo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.io.IOException

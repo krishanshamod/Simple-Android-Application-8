@@ -1,6 +1,6 @@
 package com.krishanshamod.simple_android_application_8.di
 
-import com.krishanshamod.simple_android_application_8.api.DevbyteApiService
+import com.krishanshamod.simple_android_application_8.data.api.DevbyteApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

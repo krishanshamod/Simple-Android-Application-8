@@ -1,4 +1,4 @@
-package com.krishanshamod.simple_android_application_8.model
+package com.krishanshamod.simple_android_application_8.data.model
 
 data class NetworkVideoContainer(
     val videos: List<NetworkVideo>

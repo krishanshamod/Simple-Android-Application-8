@@ -1,11 +1,11 @@
-package com.krishanshamod.simple_android_application_8.database
+package com.krishanshamod.simple_android_application_8.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.krishanshamod.simple_android_application_8.model.DatabaseVideo
+import com.krishanshamod.simple_android_application_8.data.model.DatabaseVideo
 
 @Dao
 interface DatabaseVideoDao {

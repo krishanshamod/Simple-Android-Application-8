@@ -1,6 +1,6 @@
-package com.krishanshamod.simple_android_application_8.model
+package com.krishanshamod.simple_android_application_8.data.model
 
-data class DevbyteVideo(
+data class NetworkVideo(
     val title: String,
     val description: String,
     val url: String,
