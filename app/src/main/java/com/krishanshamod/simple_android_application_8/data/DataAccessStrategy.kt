@@ -1,9 +1,8 @@
-package com.krishanshamod.simple_android_application_8.data.main
+package com.krishanshamod.simple_android_application_8.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
-import com.krishanshamod.simple_android_application_8.data.Resource
 import kotlinx.coroutines.Dispatchers
 
 fun <T, A> performGetOperation(

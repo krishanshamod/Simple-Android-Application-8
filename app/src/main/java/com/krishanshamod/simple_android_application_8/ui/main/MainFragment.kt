@@ -35,10 +35,15 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         // Observe the playlist LiveData
-        viewModel.playlist.observe(viewLifecycleOwner) {
-            Log.d("MainFragment", it[0].title)
-            binding.message.text = it[0].title
+//        viewModel.playlist.observe(viewLifecycleOwner) {
+//            Log.d("MainFragment", it[0].title)
+//            binding.message.text = it[0].title
+//        }
+
+        viewModel.videos.observe(viewLifecycleOwner) {
+            Log.d("MainFragment", it.data.toString())
         }
+
 
     }
 
