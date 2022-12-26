@@ -34,7 +34,7 @@ class MainViewModel @Inject constructor(private val mainService: MainService) : 
     private fun refreshData() = viewModelScope.launch {
         try {
             val playlist = mainService.getPlaylist()
-            _playlist.postValue(playlist.asDomainModel())
+            _playlist.postValue(playlist.body()?.asDomainModel())
 
             _eventNetworkError.value = false
             _isNetworkErrorShown.value = false

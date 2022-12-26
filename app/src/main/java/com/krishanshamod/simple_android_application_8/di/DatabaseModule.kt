@@ -2,6 +2,7 @@ package com.krishanshamod.simple_android_application_8.di
 
 import android.app.Application
 import androidx.room.Room
+import com.krishanshamod.simple_android_application_8.data.main.local.MainDao
 import com.krishanshamod.simple_android_application_8.database.RoomService
 import dagger.Module
 import dagger.Provides
@@ -20,6 +21,12 @@ object DatabaseModule {
             .fallbackToDestructiveMigration()
             .addCallback(callback)
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideMainDao(database: RoomService) : MainDao {
+        return database.mainDao()
     }
 
 }
