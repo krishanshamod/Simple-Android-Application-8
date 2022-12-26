@@ -1,4 +1,4 @@
-package com.krishanshamod.simple_android_application_8.data.model
+package com.krishanshamod.simple_android_application_8.data.main.model
 
 data class DevbyteVideo(
     val title: String,

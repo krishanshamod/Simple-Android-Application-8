@@ -4,15 +4,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.krishanshamod.simple_android_application_8.data.api.DevbyteApiService
-import com.krishanshamod.simple_android_application_8.data.model.DevbyteVideo
+import com.krishanshamod.simple_android_application_8.data.main.api.MainService
+import com.krishanshamod.simple_android_application_8.data.main.model.DevbyteVideo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.io.IOException
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val devbyteApiService: DevbyteApiService) : ViewModel() {
+class MainViewModel @Inject constructor(private val mainService: MainService) : ViewModel() {
 
     private val _playlist = MutableLiveData<List<DevbyteVideo>>()
     private var _eventNetworkError = MutableLiveData<Boolean>(false)
@@ -33,7 +33,7 @@ class MainViewModel @Inject constructor(private val devbyteApiService: DevbyteAp
 
     private fun refreshData() = viewModelScope.launch {
         try {
-            val playlist = devbyteApiService.getPlaylist()
+            val playlist = mainService.getPlaylist()
             _playlist.postValue(playlist.asDomainModel())
 
             _eventNetworkError.value = false

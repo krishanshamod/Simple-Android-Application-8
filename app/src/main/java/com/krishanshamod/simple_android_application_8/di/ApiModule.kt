@@ -1,6 +1,6 @@
 package com.krishanshamod.simple_android_application_8.di
 
-import com.krishanshamod.simple_android_application_8.data.api.DevbyteApiService
+import com.krishanshamod.simple_android_application_8.data.main.api.MainService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,8 +24,8 @@ object ApiModule {
 
     @Provides
     @Singleton
-    fun provideDevbyteApiService(retrofit: Retrofit) : DevbyteApiService {
-        return retrofit.create(DevbyteApiService::class.java)
+    fun provideDevbyteApiService(retrofit: Retrofit) : MainService {
+        return retrofit.create(MainService::class.java)
     }
 
 }
